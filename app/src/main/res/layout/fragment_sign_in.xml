@@ -5,10 +5,151 @@
     android:layout_height="match_parent"
     tools:context=".fragments.SignInFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:src="@drawable/logo"
+        android:layout_marginTop="90dp"
+        android:layout_gravity="center_horizontal"/>
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:text="COINY"
+        android:textColor="#323232"
+        android:textSize="30sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="180dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Добро пожаловать!"
+        android:textSize="30sp"
+        android:textColor="#323232"
+        android:fontFamily="@font/montserrat"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="260dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Вход \nпо номеру телефона"
+        android:textSize="18sp"
+        android:textColor="#4C4C4C"
+        android:layout_marginTop="410dp"
+        android:layout_marginStart="50sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#E70101"
+        android:text="Пароль неверный"
+        android:visibility="gone"
+        android:textSize="12sp"
+        android:layout_marginStart="50sp"
+        android:layout_marginTop="440dp"/>
+
+    <EditText
+        android:layout_marginTop="471dp"
+        android:layout_marginStart="50sp"
+        android:layout_marginEnd="53sp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="39dp"
+        android:hint="+7 | 9870304673"
+        android:paddingStart="6sp"
+        android:paddingEnd="6sp"
+        android:background="@drawable/edittext_back"
+        android:textColorHint="#000000"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/follow"
+        android:text="Вход/Регистрация"
+        android:textAllCaps="false"
+        android:fontFamily="@font/montserrat"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="61dp"
+        android:layout_marginTop="528dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="или авторизуйся с\nпомощью"
+        android:textColor="#323232"
+        android:textSize="14sp"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="590dp"/>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/google"
+        android:layout_marginTop="630dp"
+        android:layout_marginStart="50dp"/>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/apple"
+        android:layout_marginTop="630dp"
+        android:layout_marginStart="90dp"/>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/twitter"
+        android:layout_marginTop="630dp"
+        android:layout_marginStart="130dp"/>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/facebook"
+        android:layout_marginTop="630dp"
+        android:layout_marginStart="170dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Я принимаю условия"
+        android:textColor="#323232"
+        android:textSize="10dp"
+        android:layout_marginTop="670dp"
+        android:layout_marginStart="90dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10dp"
+        android:text="политики конфиденциальности"
+        android:textColor="#01B7E7"
+        android:layout_marginTop="670dp"
+        android:layout_marginStart="190dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="и"
+        android:textColor="#323232"
+        android:textSize="10dp"
+        android:layout_marginTop="670dp"
+        android:layout_marginStart="340dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="на"
+        android:textColor="#323232"
+        android:textSize="10dp"
+        android:layout_marginTop="680dp"
+        android:layout_marginStart="90dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10dp"
+        android:text="обработку персональных данных"
+        android:textColor="#01B7E7"
+        android:layout_marginTop="680dp"
+        android:layout_marginStart="103dp"/>
 
 </FrameLayout>

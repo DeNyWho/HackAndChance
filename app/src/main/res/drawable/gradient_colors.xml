@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:color="#323232"
+        android:offset="0" tools:ignore="StateListReachable" />
+
+    <item
+        android:color="#00FFFFFF"
+        android:offset="0.474"
+        />
+
+    <item
+        android:color="#01B7E7"
+        android:offset="1"
+        />
+</selector>

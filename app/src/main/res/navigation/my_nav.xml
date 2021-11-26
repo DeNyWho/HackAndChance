@@ -3,34 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/my_nav"
-    app:startDestination="@id/accountFragment">
-    <fragment
-        android:id="@+id/accountFragment"
-        android:name="com.example.hackchance.fragments.AccountFragment"
-        android:label="fragment_account"
-        tools:layout="@layout/fragment_account" >
-        <action
-            android:id="@+id/action_accountFragment_to_mainFragment"
-            app:destination="@id/mainFragment" />
-        <action
-            android:id="@+id/action_accountFragment_to_profileFragment"
-            app:destination="@id/profileFragment" />
-        <action
-            android:id="@+id/action_accountFragment_to_messageFragment"
-            app:destination="@id/messageFragment" />
-        <action
-            android:id="@+id/action_accountFragment_to_notificationFragment"
-            app:destination="@id/notificationFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/launchScreenFragment"
-        android:name="com.example.hackchance.fragments.LaunchScreenFragment"
-        android:label="fragment_launch_screen"
-        tools:layout="@layout/fragment_launch_screen" >
-        <action
-            android:id="@+id/action_launchScreenFragment_to_signInFragment"
-            app:destination="@id/signInFragment" />
-    </fragment>
+    app:startDestination="@id/launchScreenFragment">
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.example.hackchance.fragments.MainFragment"
@@ -45,9 +18,6 @@
         <action
             android:id="@+id/action_mainFragment_to_messageFragment"
             app:destination="@id/messageFragment" />
-        <action
-            android:id="@+id/action_mainFragment_to_accountFragment"
-            app:destination="@id/accountFragment" />
     </fragment>
     <fragment
         android:id="@+id/messageFragment"
@@ -60,9 +30,6 @@
         <action
             android:id="@+id/action_messageFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
-        <action
-            android:id="@+id/action_messageFragment_to_accountFragment"
-            app:destination="@id/accountFragment" />
     </fragment>
     <fragment
         android:id="@+id/notificationFragment"
@@ -78,9 +45,6 @@
         <action
             android:id="@+id/action_notificationFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
-        <action
-            android:id="@+id/action_notificationFragment_to_accountFragment"
-            app:destination="@id/accountFragment" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -96,9 +60,6 @@
         <action
             android:id="@+id/action_profileFragment_to_messageFragment"
             app:destination="@id/messageFragment" />
-        <action
-            android:id="@+id/action_profileFragment_to_accountFragment"
-            app:destination="@id/accountFragment" />
     </fragment>
     <fragment
         android:id="@+id/signInFragment"
@@ -120,5 +81,14 @@
         <action
             android:id="@+id/action_singUpFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/launchScreenFragment"
+        android:name="com.example.hackchance.fragments.LaunchScreenFragment"
+        android:label="fragment_launch_screen"
+        tools:layout="@layout/fragment_launch_screen" >
+        <action
+            android:id="@+id/action_launchScreenFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
     </fragment>
 </navigation>
