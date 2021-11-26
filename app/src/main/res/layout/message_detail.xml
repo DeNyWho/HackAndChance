@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="#323232"/>
+
+    <ImageView
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="13dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/vector"/>
+
+    <ImageView
+        android:layout_marginTop="2dp"
+        android:layout_marginStart="60dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/man"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Антонов Илья"
+        android:fontFamily="@font/montserrat"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginTop="7dp"
+        android:layout_marginStart="120dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        android:text="Онлайн"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="30dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="55dp"
+        android:layout_marginTop="55sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="#323232"
+        android:layout_marginTop="677dp"/>
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/add"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="690dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="684dp"
+        android:background="@drawable/mess"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="55dp"
+        android:hint="Сообщение"
+        android:textColorHint="#323232"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"/>
+
+    <ImageView
+        android:id="@+id/voice"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="690dp"
+        android:layout_marginStart="370dp"
+        android:src="@drawable/voice"/>
+
+</FrameLayout>

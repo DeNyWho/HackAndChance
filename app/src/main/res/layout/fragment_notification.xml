@@ -4,11 +4,79 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.NotificationFragment">
-
-    <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Уведомления"
+        android:fontFamily="@font/montserrat"
+        android:textSize="22dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="41dp"
+        android:layout_marginStart="42dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Комментарии"
+        android:textSize="22dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/montserrat"
+        android:layout_marginTop="41dp"
+        android:layout_marginStart="220dp"/>
+
+    <View
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="1dp"
+        android:background="@color/black"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="22dp"/>
+
+    <View
+        android:id="@+id/notif"
+        android:layout_marginStart="20dp"
+        android:layout_width="185dp"
+        android:layout_height="1dp"
+        android:visibility="gone"
+        android:background="#01B7E7"
+        android:layout_marginTop="80dp"/>
+
+    <View
+        android:id="@+id/comment"
+        android:layout_marginStart="205dp"
+        android:layout_width="185dp"
+        android:layout_height="1dp"
+        android:visibility="gone"
+        android:background="#01B7E7"
+        android:layout_marginTop="80dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Новые"
+        android:fontFamily="@font/montserrat"
+        android:textSize="22sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="120dp"
+        android:layout_marginStart="42dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="170dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Просмотренные"
+        android:fontFamily="@font/montserrat"
+        android:textSize="22sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="420dp"
+        android:layout_marginStart="42dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="470dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
 
 </FrameLayout>

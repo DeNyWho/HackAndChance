@@ -25,7 +25,7 @@
         android:textSize="19sp"
         android:paddingEnd="16sp"
         android:layout_marginStart="35dp"
-        android:layout_marginTop="124dp"
+        android:layout_marginTop="104dp"
         android:layout_marginEnd="150dp"/>
     <TextView
         android:layout_width="wrap_content"
@@ -34,8 +34,31 @@
         android:text="▼"
         android:textColor="#01B7E7"
         android:rotation="45"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="110dp"
         android:layout_marginStart="23dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40dp"
+        android:text="▼"
+        android:textColor="#000000"
+        android:rotation="-165"
+        android:layout_marginTop="177dp"
+        android:layout_marginStart="355dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="190dp"
+        android:layout_marginTop="170dp"
+        android:layout_marginEnd="30dp"
+        android:hint="Имя"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:fontFamily="@font/montserrat"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:background="@drawable/reg_edit"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -48,7 +71,7 @@
         android:paddingStart="16sp"
         android:paddingEnd="16sp"
         android:layout_marginStart="35dp"
-        android:layout_marginTop="254dp"
+        android:layout_marginTop="234dp"
         android:layout_marginEnd="150dp"/>
     <TextView
         android:layout_width="wrap_content"
@@ -57,7 +80,93 @@
         android:text="▼"
         android:textColor="#01B7E7"
         android:rotation="45"
-        android:layout_marginTop="260dp"
+        android:layout_marginTop="240dp"
         android:layout_marginStart="23dp"/>
+
+    <FrameLayout
+        android:layout_marginTop="310dp"
+        android:layout_marginStart="33dp"
+        android:layout_width="305dp"
+        android:layout_height="309dp"
+        android:background="@drawable/follow">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center_horizontal"
+            android:text="Введи свой пароль"
+            android:textColor="@color/white"
+            android:textSize="22dp"
+            android:fontFamily="@font/montserrat"/>
+        
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/reg_edit"
+            android:layout_marginTop="60sp"
+            android:layout_marginStart="20dp"
+            android:hint="********"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:layout_marginEnd="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="В пароле должна быть одна цифра"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserrat"
+            android:layout_marginTop="130sp"
+            android:layout_marginStart="60dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="Пароль должен быть больше 7\n символов"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserrat"
+            android:layout_marginTop="160sp"
+            android:layout_marginStart="60dp"/>
+        
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/reg_edit"
+            android:layout_marginTop="240dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:text="Подтвердить пароль"
+            android:fontFamily="@font/montserrat"
+            android:textAllCaps="false"
+            android:textSize="14sp"/>
+
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="45dp"
+        android:text="▼"
+        android:textColor="#01B7E7"
+        android:rotation="45"
+        android:layout_marginTop="580dp"
+        android:layout_marginStart="23dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/follow"
+        android:layout_marginTop="670dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="80dp"
+        android:text="Далее"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:fontFamily="@font/montserrat"/>
 
 </FrameLayout>
