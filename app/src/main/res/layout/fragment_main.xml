@@ -36,14 +36,14 @@
         app:queryHint="Поиск" />
 
     <TextView
+        style="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/grey"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="188dp"
-        android:fontFamily="@font/montserrat"
+        android:textSize="21sp"
         android:text="Категории"
-        android:textColor="@color/grey"
-        android:textSize="20sp" />
+        android:layout_marginTop="188dp"
+        android:layout_marginStart="32dp"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
