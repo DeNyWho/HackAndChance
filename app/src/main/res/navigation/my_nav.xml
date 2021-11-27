@@ -10,14 +10,33 @@
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" >
         <action
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
             android:id="@+id/action_mainFragment_to_notificationFragment"
             app:destination="@id/notificationFragment" />
         <action
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_left"
             android:id="@+id/action_mainFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
         <action
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_left"
             android:id="@+id/action_mainFragment_to_messageFragment"
             app:destination="@id/messageFragment" />
+        <action
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            android:id="@+id/action_mainFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
     </fragment>
     <fragment
         android:id="@+id/messageFragment"
@@ -25,11 +44,33 @@
         android:label="fragment_message"
         tools:layout="@layout/fragment_message" >
         <action
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
             android:id="@+id/action_messageFragment_to_notificationFragment"
             app:destination="@id/notificationFragment" />
         <action
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_left"
             android:id="@+id/action_messageFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
+        <action
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            android:id="@+id/action_messageFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            android:id="@+id/action_messageFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
     </fragment>
     <fragment
         android:id="@+id/notificationFragment"
@@ -37,14 +78,33 @@
         android:label="fragment_notification"
         tools:layout="@layout/fragment_notification" >
         <action
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_left"
             android:id="@+id/action_notificationFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
         <action
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_left"
             android:id="@+id/action_notificationFragment_to_messageFragment"
             app:destination="@id/messageFragment" />
         <action
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_left"
             android:id="@+id/action_notificationFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
+        <action
+            app:enterAnim="@anim/from_right"
+        app:exitAnim="@anim/to_left"
+        app:popEnterAnim="@anim/from_left"
+        app:popExitAnim="@anim/to_right"
+            android:id="@+id/action_notificationFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -52,14 +112,33 @@
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" >
         <action
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
             android:id="@+id/action_profileFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
         <action
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
             android:id="@+id/action_profileFragment_to_notificationFragment"
             app:destination="@id/notificationFragment" />
         <action
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
             android:id="@+id/action_profileFragment_to_messageFragment"
             app:destination="@id/messageFragment" />
+        <action
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            android:id="@+id/action_profileFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
     </fragment>
     <fragment
         android:id="@+id/signInFragment"
@@ -67,6 +146,10 @@
         android:label="fragment_sign_in"
         tools:layout="@layout/fragment_sign_in" >
         <action
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
             android:id="@+id/action_signInFragment_to_singUpFragment"
             app:destination="@id/singUpFragment" />
         <action
@@ -90,5 +173,39 @@
         <action
             android:id="@+id/action_launchScreenFragment_to_signInFragment"
             app:destination="@id/signInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.hackchance.fragments.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_left"
+            android:id="@+id/action_settingsFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_left"
+            android:id="@+id/action_settingsFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_left"
+            android:id="@+id/action_settingsFragment_to_messageFragment"
+            app:destination="@id/messageFragment" />
+        <action
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_left"
+            android:id="@+id/action_settingsFragment_to_notificationFragment"
+            app:destination="@id/notificationFragment" />
     </fragment>
 </navigation>

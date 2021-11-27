@@ -32,6 +32,9 @@ android {
 }
 
 dependencies {
+    implementation 'ru.egslava:MaskedEditText:1.0.5'
+    implementation 'com.github.10clouds:FluidBottomNavigation-android:1.2'
+
 
     implementation 'com.android.support.constraint:constraint-layout:2.0.4'
     //Picasso

@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.ProfileFragment">
 
     <ImageView
@@ -149,5 +150,22 @@
         android:layout_marginTop="420dp"
         android:layout_width="match_parent"
         android:layout_height="310dp"/>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <com.tenclouds.fluidbottomnavigation.FluidBottomNavigation
+            android:id="@+id/fluidBottomNavigation"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            app:accentColor="@color/colorPrimaryDark"
+            app:backColor="@color/backColor"
+            app:iconColor="@color/colorPrimary"
+            app:iconSelectedColor="@color/iconSelectedColor"
+            app:textColor="@color/colorPrimaryDark"
+            />
+    </FrameLayout>
 
 </FrameLayout>

@@ -36,14 +36,14 @@
         app:queryHint="Поиск" />
 
     <TextView
-        style="@style/TextAppearance.AppCompat.Small"
-        android:textColor="@color/grey"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="21sp"
-        android:text="Категории"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="188dp"
-        android:layout_marginStart="32dp"/>
+        android:fontFamily="@font/montserrat"
+        android:text="Категории"
+        android:textColor="@color/grey"
+        android:textSize="20sp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
@@ -66,5 +66,21 @@
         android:layout_height="260dp"
         android:orientation="horizontal"
         android:layout_marginTop="400dp" />
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <com.tenclouds.fluidbottomnavigation.FluidBottomNavigation
+            android:id="@+id/fluidBottomNavigation"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            app:accentColor="@color/colorPrimaryDark"
+            app:backColor="@color/backColor"
+            app:iconColor="@color/colorPrimary"
+            app:iconSelectedColor="@color/iconSelectedColor"
+            app:textColor="@color/colorPrimaryDark"
+            />
+    </FrameLayout>
 
 </FrameLayout>

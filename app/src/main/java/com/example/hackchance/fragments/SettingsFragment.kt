@@ -13,16 +13,16 @@ import com.tenclouds.fluidbottomnavigation.FluidBottomNavigation
 import com.tenclouds.fluidbottomnavigation.FluidBottomNavigationItem
 import com.tenclouds.fluidbottomnavigation.listener.OnTabSelectedListener
 
-class MessageFragment : Fragment() {
+class SettingsFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_message, container, false)
+        val view = inflater.inflate(R.layout.fragment_settings, container, false)
 
         val fluidBottomNavigation = view.findViewById<FluidBottomNavigation>(R.id.fluidBottomNavigation)
-        fluidBottomNavigation.selectTab(1)
+        fluidBottomNavigation.selectTab(4)
         fluidBottomNavigation.accentColor = ContextCompat.getColor(requireContext(), R.color.background)
         fluidBottomNavigation.backColor = ContextCompat.getColor(requireContext(), R.color.background)
         fluidBottomNavigation.textColor = ContextCompat.getColor(requireContext(), R.color.colorPrimaryDark)
@@ -63,14 +63,13 @@ class MessageFragment : Fragment() {
 
             override fun onTabSelected(position: Int) {
                 when(position){
-                    0 -> findNavController().navigate(R.id.action_messageFragment_to_profileFragment)
-                    2 -> findNavController().navigate(R.id.action_messageFragment_to_mainFragment)
-                    3 -> findNavController().navigate(R.id.action_messageFragment_to_notificationFragment)
-                    4 -> findNavController().navigate(R.id.action_messageFragment_to_settingsFragment)
+                    0 -> findNavController().navigate(R.id.action_settingsFragment_to_profileFragment)
+                    1 -> findNavController().navigate(R.id.action_settingsFragment_to_messageFragment)
+                    2 -> findNavController().navigate(R.id.action_settingsFragment_to_mainFragment)
+                    3 -> findNavController().navigate(R.id.action_settingsFragment_to_notificationFragment)
                 }
             }
         }
         return view
     }
-
 }
