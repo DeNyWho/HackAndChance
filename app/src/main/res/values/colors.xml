@@ -12,4 +12,5 @@
     <color name="colorPrimaryDark">#323232</color>
     <color name="colorAccent">#FF4081</color>
     <color name="background">#323232</color>
+    <color name="background_blackout">#A1000000</color>
 </resources>
