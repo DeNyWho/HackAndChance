@@ -6,6 +6,7 @@
     tools:context=".fragments.SingUpFragment">
 
     <TextView
+        android:layout_marginTop="15dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Регистрация"
@@ -25,7 +26,7 @@
         android:textSize="19sp"
         android:paddingEnd="16sp"
         android:layout_marginStart="35dp"
-        android:layout_marginTop="104dp"
+        android:layout_marginTop="74dp"
         android:layout_marginEnd="150dp"/>
     <TextView
         android:layout_width="wrap_content"
@@ -34,7 +35,7 @@
         android:text="▼"
         android:textColor="#01B7E7"
         android:rotation="45"
-        android:layout_marginTop="110dp"
+        android:layout_marginTop="80dp"
         android:layout_marginStart="23dp"/>
     <TextView
         android:layout_width="wrap_content"
@@ -43,14 +44,15 @@
         android:text="▼"
         android:textColor="#000000"
         android:rotation="-165"
-        android:layout_marginTop="177dp"
+        android:layout_marginTop="147dp"
         android:layout_marginStart="355dp"/>
 
     <EditText
+        android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginStart="190dp"
-        android:layout_marginTop="170dp"
+        android:layout_marginTop="140dp"
         android:layout_marginEnd="30dp"
         android:hint="Имя"
         android:paddingStart="15dp"
@@ -61,6 +63,8 @@
         android:background="@drawable/reg_edit"/>
 
     <TextView
+        android:visibility="gone"
+        android:id="@+id/hello"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:paddingTop="4dp"
@@ -71,23 +75,27 @@
         android:paddingStart="16sp"
         android:paddingEnd="16sp"
         android:layout_marginStart="35dp"
-        android:layout_marginTop="234dp"
+        android:layout_marginTop="204dp"
         android:layout_marginEnd="150dp"/>
     <TextView
+        android:visibility="gone"
+        android:id="@+id/under_hello"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="40dp"
         android:text="▼"
         android:textColor="#01B7E7"
         android:rotation="45"
-        android:layout_marginTop="240dp"
+        android:layout_marginTop="210dp"
         android:layout_marginStart="23dp"/>
 
     <FrameLayout
-        android:layout_marginTop="310dp"
+        android:visibility="gone"
+        android:id="@+id/password"
+        android:layout_marginTop="270dp"
         android:layout_marginStart="33dp"
         android:layout_width="305dp"
-        android:layout_height="309dp"
+        android:layout_height="209dp"
         android:background="@drawable/follow">
 
         <TextView
@@ -101,6 +109,7 @@
             android:fontFamily="@font/montserrat"/>
         
         <EditText
+            android:id="@+id/reg_edit"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:background="@drawable/reg_edit"
@@ -123,6 +132,36 @@
             android:layout_marginTop="130sp"
             android:layout_marginStart="60dp"/>
 
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/first"
+            android:layout_width="25dp"
+            android:layout_marginTop="125dp"
+            android:layout_marginStart="25sp"
+            android:layout_height="25dp"
+            android:src="@drawable/ellipse_6" />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="125dp"
+            android:src="@drawable/check"/>
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/second"
+            android:layout_width="25dp"
+            android:layout_marginTop="160dp"
+            android:layout_marginStart="25sp"
+            android:layout_height="25dp"
+            android:src="@drawable/ellipse_6" />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="160dp"
+            android:src="@drawable/check"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -133,31 +172,25 @@
             android:layout_marginTop="160sp"
             android:layout_marginStart="60dp"/>
         
-        <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="@drawable/reg_edit"
-            android:layout_marginTop="240dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginEnd="40dp"
-            android:text="Подтвердить пароль"
-            android:fontFamily="@font/montserrat"
-            android:textAllCaps="false"
-            android:textSize="14sp"/>
+
 
     </FrameLayout>
 
     <TextView
+        android:visibility="gone"
+        android:id="@+id/under_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="45dp"
         android:text="▼"
         android:textColor="#01B7E7"
         android:rotation="45"
-        android:layout_marginTop="580dp"
+        android:layout_marginTop="445dp"
         android:layout_marginStart="23dp"/>
 
     <androidx.appcompat.widget.AppCompatButton
+        android:visibility="gone"
+        android:id="@+id/next"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:background="@drawable/follow"
@@ -168,5 +201,78 @@
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:fontFamily="@font/montserrat"/>
+
+    <FrameLayout
+        android:visibility="gone"
+        android:id="@+id/emailFrame"
+        android:layout_marginStart="33dp"
+        android:layout_width="305dp"
+        android:layout_height="150dp"
+        android:background="@drawable/follow"
+        android:layout_marginTop="500dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:fontFamily="@font/montserrat"
+            android:text="Введи свою эл.почту"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/white"/>
+        <EditText
+            android:id="@+id/email_edit"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="55dp"
+            android:layout_marginEnd="30dp"
+            android:hint="Электронная почта"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:background="@drawable/reg_edit"/>
+
+        <ImageView
+            android:visibility="gone"
+            android:layout_marginStart="15dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="106dp"
+            android:id="@+id/third"
+            android:src="@drawable/ellipse_6"/>
+
+        <ImageView
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="106dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/check"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="Эл почта должна иметь вид:\n ...@domain.ru"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserrat"
+            android:layout_marginTop="100sp"
+            android:layout_marginStart="50dp"/>
+    </FrameLayout>
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/under_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="45dp"
+        android:text="▼"
+        android:textColor="#01B7E7"
+        android:rotation="45"
+        android:layout_marginTop="617dp"
+        android:layout_marginStart="23dp"/>
+
+
 
 </FrameLayout>

@@ -1,60 +1,120 @@
 package com.example.hackchance.fragments
 
 import android.os.Bundle
+import android.os.Handler
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.widget.AppCompatButton
+import androidx.core.os.postDelayed
+import androidx.core.view.isVisible
+import androidx.navigation.fragment.findNavController
 import com.example.hackchance.R
+import android.text.Editable
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+import android.text.TextWatcher
+import android.widget.*
 
-/**
- * A simple [Fragment] subclass.
- * Use the [SingUpFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
+
 class SingUpFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_sing_up, container, false)
-    }
+        val view = inflater.inflate(R.layout.fragment_sing_up, container, false)
+        val bundle = arguments
+        val name = view.findViewById<EditText>(R.id.name)
+        val hello = view.findViewById<TextView>(R.id.hello)
+        val under_hello = view.findViewById<TextView>(R.id.under_hello)
+        val passwordField = view.findViewById<FrameLayout>(R.id.password)
+        val underPasswordField = view.findViewById<TextView>(R.id.under_password)
+        val passwordEdit = view.findViewById<EditText>(R.id.reg_edit)
+        val underEMailHello = view.findViewById<TextView>(R.id.under_email)
+        val emailEdit = view.findViewById<EditText>(R.id.email_edit)
+        val next = view.findViewById<AppCompatButton>(R.id.next)
+        val first = view.findViewById<ImageView>(R.id.first)
+        val second = view.findViewById<ImageView>(R.id.second)
+        val emailFrame = view.findViewById<FrameLayout>(R.id.emailFrame)
+        val third = view.findViewById<ImageView>(R.id.third)
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment SingUpFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            SingUpFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+        val handler = Handler()
+        name.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(s: Editable) {}
+            override fun beforeTextChanged(
+                s: CharSequence, start: Int,
+                count: Int, after: Int
+            ) {
+            }
+
+            override fun onTextChanged(
+                s: CharSequence, start: Int,
+                before: Int, count: Int
+            ) {
+                hello.isVisible = true
+                hello.text = "Привет, ${name.text}"
+                under_hello.isVisible = true
+                handler.postDelayed(1000) {
+                    passwordField.isVisible = true
+                    underPasswordField.isVisible = true
                 }
             }
+        })
+        passwordEdit.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(s: Editable) {}
+            override fun beforeTextChanged(
+                s: CharSequence, start: Int,
+                count: Int, after: Int
+            ) {
+            }
+
+            override fun onTextChanged(
+                s: CharSequence, start: Int,
+                before: Int, count: Int
+            ) {
+                if(s.length>7) {
+                    second.isVisible = true
+                    handler.postDelayed(1000) {
+                        underEMailHello.isVisible = true
+                        emailEdit.isVisible = true
+                    }
+                }
+                else second.isVisible = false
+                first.isVisible = s.contains('1') || s.contains('2') || s.contains('3') || s.contains('4')|| s.contains('5') || s.contains('6') || s.contains('7')|| s.contains('8') || s.contains('9')
+                if(s.length>7 && s.contains('1') || s.contains('2') || s.contains('3') || s.contains('4')|| s.contains('5') || s.contains('6') || s.contains('7')|| s.contains('8') || s.contains('9'))
+                {
+                    emailFrame.isVisible = true
+                }
+            }
+        })
+        emailEdit.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(s: Editable) {}
+            override fun beforeTextChanged(
+                s: CharSequence, start: Int,
+                count: Int, after: Int
+            ) {
+            }
+
+            override fun onTextChanged(
+                s: CharSequence, start: Int,
+                before: Int, count: Int
+            ) {
+                if(android.util.Patterns.EMAIL_ADDRESS.matcher(s).matches()) {
+                    third.isVisible = true
+                    val handler = Handler()
+                    handler.postDelayed(800){
+                        next.isVisible = true
+                    }
+                } else third.isVisible = false
+            }
+        })
+        next.setOnClickListener {
+                    findNavController().navigate(R.id.action_singUpFragment_to_mainFragment)
+        }
+        val number = bundle?.getString("call")
+
+        return view
     }
+
 }

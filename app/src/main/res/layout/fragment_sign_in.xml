@@ -39,7 +39,7 @@
         android:text="Вход \nпо номеру телефона"
         android:textSize="18sp"
         android:textColor="#4C4C4C"
-        android:layout_marginTop="410dp"
+        android:layout_marginTop="340dp"
         android:layout_marginStart="50sp"/>
     <TextView
         android:layout_width="wrap_content"
@@ -52,7 +52,8 @@
         android:layout_marginTop="440dp"/>
 
     <br.com.sapereaude.maskedEditText.MaskedEditText
-        android:layout_marginTop="471dp"
+        android:id="@+id/telephone_number"
+        android:layout_marginTop="401dp"
         android:layout_marginStart="50sp"
         android:layout_marginEnd="53sp"
         android:layout_width="match_parent"
@@ -61,17 +62,33 @@
         mask:mask="+7 | (###) ###-##-##"
         android:hint="1234567890"
         app:keep_hint="true"
+        android:textColor="@color/black"
+        android:fontFamily="@font/montserrat"
         android:paddingStart="6sp"
         android:paddingEnd="6sp"
         android:background="@drawable/edittext_back"
         android:textColorHint="#000000"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:hint="Пароль"
+        android:layout_marginStart="50sp"
+        android:layout_marginEnd="53dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:textColorHint="@color/black"
+        android:fontFamily="@font/montserrat"
+        android:textColor="@color/black"
+        android:background="@drawable/edittext_back"
+        android:layout_marginTop="461dp"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/next"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:background="@drawable/follow"
-        android:text="Вход/Регистрация"
+        android:text="Вход | Регистрация"
         android:textAllCaps="false"
         android:fontFamily="@font/montserrat"
         android:textSize="20dp"
@@ -90,6 +107,7 @@
         android:layout_marginTop="590dp"/>
 
     <ImageView
+        android:id="@+id/google"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:src="@drawable/google"
@@ -97,13 +115,7 @@
         android:layout_marginStart="50dp"/>
 
     <ImageView
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:src="@drawable/apple"
-        android:layout_marginTop="630dp"
-        android:layout_marginStart="90dp"/>
-
-    <ImageView
+        android:id="@+id/twitter"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:src="@drawable/twitter"
@@ -111,11 +123,12 @@
         android:layout_marginStart="130dp"/>
 
     <ImageView
+        android:id="@+id/facebook"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:src="@drawable/facebook"
         android:layout_marginTop="630dp"
-        android:layout_marginStart="170dp"/>
+        android:layout_marginStart="90dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -132,7 +145,7 @@
         android:text="политики конфиденциальности"
         android:textColor="#01B7E7"
         android:layout_marginTop="670dp"
-        android:layout_marginStart="190dp"/>
+        android:layout_marginStart="193dp"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -140,7 +153,7 @@
         android:textColor="#323232"
         android:textSize="10dp"
         android:layout_marginTop="670dp"
-        android:layout_marginStart="340dp"/>
+        android:layout_marginStart="348dp"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

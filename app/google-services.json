@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1076829323273",
+    "firebase_url": "https://hackandchance-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "hackandchance",
+    "storage_bucket": "hackandchance.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1076829323273:android:753a52937f5712922fb8d8",
+        "android_client_info": {
+          "package_name": "com.example.hackchance"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1076829323273-rmqho08kkhb4iisecsbt90fod64n5kjt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hackchance",
+            "certificate_hash": "383b3b3979d7995884ff77ea8a08ce1f496e9b09"
+          }
+        },
+        {
+          "client_id": "1076829323273-6ktlknvr45681sb4vp9j5k9aujqeh30d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDi6tWBpH6gNYWfQfvKSbZjQitNZ_zzcrc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1076829323273-6ktlknvr45681sb4vp9j5k9aujqeh30d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
