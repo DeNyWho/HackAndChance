@@ -23,6 +23,7 @@ import com.example.hackchance.utils.LoginIntoGoogle
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.android.gms.common.GoogleApiAvailability
 import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.AuthCredential
 import com.google.firebase.auth.FirebaseAuth
@@ -36,12 +37,6 @@ class SignInFragment : Fragment() {
     private lateinit var authFireBase: FirebaseAuth
     private var loginWithFacebookUtils: LoginIntoFacebook? = null
     private var loginWithGoogleUtils: LoginIntoGoogle? = null
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        authFireBase = FirebaseAuth.getInstance()
-        loginWithFacebookUtils = LoginIntoFacebook(requireActivity())
-        loginWithGoogleUtils = LoginIntoGoogle(requireActivity())
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -52,6 +47,9 @@ class SignInFragment : Fragment() {
         val telephoneNumber = view.findViewById<EditText>(R.id.telephone_number)
         btnLoginGoogle = view.findViewById(R.id.google)
         btnLoginFacebook = view.findViewById(R.id.facebook)
+        authFireBase = FirebaseAuth.getInstance()
+        loginWithFacebookUtils = LoginIntoFacebook(requireActivity())
+        loginWithGoogleUtils = LoginIntoGoogle(requireActivity())
 
         next.setOnClickListener{
             val bundle = Bundle()
@@ -64,6 +62,7 @@ class SignInFragment : Fragment() {
         }
 
         btnLoginGoogle?.setOnClickListener {
+            GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(requireContext())
             loginWithGoogleUtils?.startLoginGoogle()
         }
         loginWithFacebookUtils?.callbackCredentials = ::handleCredentialsLogin
@@ -82,10 +81,10 @@ class SignInFragment : Fragment() {
         authFireBase.signInWithCredential(credentials)
             .addOnCompleteListener(requireActivity()) { task ->
                 if (task.isSuccessful) {
+                    findNavController().navigate(R.id.action_signInFragment_to_mainFragment)
                     val user = authFireBase.currentUser
 
                     Log.v("login_activity", "User: Id: ${ user?.uid } name: ${user?.displayName}, email: ${user?.email}")
-                    findNavController().navigate(R.id.action_signInFragment_to_mainFragment)
                 } else {
                     task.exception?.printStackTrace()
                     Log.e("login_activity", "Login error: ${ task.exception?.message }")

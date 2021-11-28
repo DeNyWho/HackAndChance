@@ -25,13 +25,17 @@
         <entry key="..\:/Users/denis/AndroidStudioProjects/HackChance/app/src/main/res/layout/fragment_launch_screen.xml" value="0.33" />
         <entry key="..\:/Users/denis/AndroidStudioProjects/HackChance/app/src/main/res/layout/fragment_main.xml" value="0.22" />
         <entry key="..\:/Users/denis/AndroidStudioProjects/HackChance/app/src/main/res/layout/fragment_main_article_detail.xml" value="0.38697916666666665" />
+        <entry key="..\:/Users/denis/AndroidStudioProjects/HackChance/app/src/main/res/layout/fragment_main_article_detail_description.xml" value="0.38697916666666665" />
+        <entry key="..\:/Users/denis/AndroidStudioProjects/HackChance/app/src/main/res/layout/fragment_main_carrency_detail.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/denis/AndroidStudioProjects/HackChance/app/src/main/res/layout/fragment_message.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/denis/AndroidStudioProjects/HackChance/app/src/main/res/layout/fragment_notification.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/denis/AndroidStudioProjects/HackChance/app/src/main/res/layout/fragment_profile.xml" value="0.33" />
         <entry key="..\:/Users/denis/AndroidStudioProjects/HackChance/app/src/main/res/layout/fragment_settings.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/denis/AndroidStudioProjects/HackChance/app/src/main/res/layout/fragment_sign_in.xml" value="0.33" />
         <entry key="..\:/Users/denis/AndroidStudioProjects/HackChance/app/src/main/res/layout/fragment_sing_up.xml" value="0.33" />
+        <entry key="..\:/Users/denis/AndroidStudioProjects/HackChance/app/src/main/res/layout/item_message.xml" value="0.33" />
         <entry key="..\:/Users/denis/AndroidStudioProjects/HackChance/app/src/main/res/layout/main_item_category.xml" value="0.25" />
+        <entry key="..\:/Users/denis/AndroidStudioProjects/HackChance/app/src/main/res/layout/main_item_description_comment.xml" value="0.35648148148148145" />
         <entry key="..\:/Users/denis/AndroidStudioProjects/HackChance/app/src/main/res/layout/message_detail.xml" value="0.38697916666666665" />
       </map>
     </option>

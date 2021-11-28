@@ -9,11 +9,16 @@ import androidx.core.content.ContextCompat
 import androidx.navigation.fragment.findNavController
 import com.example.hackchance.R
 import com.google.android.material.tabs.TabLayout
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import com.tenclouds.fluidbottomnavigation.FluidBottomNavigation
 import com.tenclouds.fluidbottomnavigation.FluidBottomNavigationItem
 import com.tenclouds.fluidbottomnavigation.listener.OnTabSelectedListener
 
 class MessageFragment : Fragment() {
+
+    lateinit var auth: FirebaseAuth
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,6 +33,11 @@ class MessageFragment : Fragment() {
         fluidBottomNavigation.textColor = ContextCompat.getColor(requireContext(), R.color.colorPrimaryDark)
         fluidBottomNavigation.iconColor = ContextCompat.getColor(requireContext(), R.color.colorPrimary)
         fluidBottomNavigation.iconSelectedColor = ContextCompat.getColor(requireContext(), R.color.iconSelectedColor)
+
+        auth = Firebase.auth
+
+
+        val size = auth
 
         fluidBottomNavigation.items =
             listOf(

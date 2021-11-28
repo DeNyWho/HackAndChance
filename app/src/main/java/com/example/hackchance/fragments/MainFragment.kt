@@ -31,7 +31,6 @@ class MainFragment : Fragment() {
         fluidBottomNavigation.iconColor = ContextCompat.getColor(requireContext(), R.color.colorPrimary)
         fluidBottomNavigation.iconSelectedColor = ContextCompat.getColor(requireContext(), R.color.iconSelectedColor)
 
-        // Write a message to the database
         val database = Firebase.database
         val myRef = database.getReference("message")
 
